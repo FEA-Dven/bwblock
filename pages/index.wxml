@@ -1,0 +1,14 @@
+
+  <view class="container">
+    <view  wx:for="{{mydata}}" wx:key="index"> 
+    <view class="hang" data-index="{{index}}" bindtap="listClick">
+      <view wx:for="{{item}}" wx:key="index"> 
+        <view class="{{item.type? 'black' : 'item' }}" data-index="{{index}}" bindtap="click"/>
+      </view>
+    </view>
+    </view> 
+  </view>
+  <view>您的得分:{{score}}分</view>  
+<modal title="提示" confirm-text="确定" no-cancel="no-cancel" hidden="{{hide}}" bindconfirm="restart">
+  {{message}}
+</modal>
